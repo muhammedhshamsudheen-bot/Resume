@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muhammedh Shamsudheen N.B. | Resume</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e9eef5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           RESUME
+        ========================= */
+
+        .resume {
+            width: 900px;
+            max-width: 95%;
+            margin: 40px auto;
+
+            display: grid;
+            grid-template-columns: 280px 1fr;
+
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           LEFT SIDEBAR
+        ========================= */
+
+        .sidebar {
+            background: #172554;
+            color: white;
+            padding: 35px 25px;
+        }
+
+
+        /* =========================
+           PROFILE
+        ========================= */
+
+        .profile {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border: 5px solid white;
+
+            background: #3b82f6;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .profile h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .profile p {
+            color: #bfdbfe;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SIDEBAR SECTIONS
+        ========================= */
+
+        .sidebar section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            border-bottom: 2px solid #3b82f6;
+
+            padding-bottom: 7px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            font-size: 13px;
+
+            margin: 10px 0;
+
+            color: #e2e8f0;
+
+            word-break: break-word;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skill {
+            margin-bottom: 14px;
+        }
+
+        .skill-name {
+            font-size: 13px;
+        }
+
+        .bar {
+            height: 6px;
+
+            background: #334155;
+
+            border-radius: 10px;
+
+            margin-top: 5px;
+
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+
+            background: #60a5fa;
+
+            border-radius: 10px;
+        }
+
+        .python {
+            width: 80%;
+        }
+
+        .java {
+            width: 70%;
+        }
+
+        .html {
+            width: 90%;
+        }
+
+        .css {
+            width: 85%;
+        }
+
+        .javascript {
+            width: 80%;
+        }
+
+        .cybersecurity {
+            width: 75%;
+        }
+
+        .sql {
+            width: 70%;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .content {
+            padding: 40px;
+        }
+
+        .content section {
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            color: #172554;
+
+            font-size: 22px;
+
+            margin-bottom: 15px;
+
+            padding-bottom: 7px;
+
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        .content p {
+            font-size: 14px;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+            border-left: 4px solid #3b82f6;
+
+            padding-left: 18px;
+        }
+
+        .education h3 {
+            color: #172554;
+
+            font-size: 17px;
+
+            margin-bottom: 3px;
+        }
+
+        .education .date {
+            color: #2563eb;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project {
+            background: #f8fafc;
+
+            padding: 16px 18px;
+
+            margin-bottom: 15px;
+
+            border-left: 5px solid #3b82f6;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .project h3 {
+            color: #172554;
+
+            margin-bottom: 5px;
+
+            font-size: 16px;
+        }
+
+        .tech {
+            color: #2563eb;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+        .project p {
+            margin-top: 8px;
+        }
+
+        .project ul {
+            margin-top: 8px;
+
+            padding-left: 20px;
+        }
+
+        .project li {
+            font-size: 13px;
+
+            margin-bottom: 4px;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================= */
+
+        .certificate {
+            background: #f8fafc;
+
+            padding: 14px 18px;
+
+            margin-bottom: 12px;
+
+            border-radius: 8px;
+
+            border-left: 4px solid #3b82f6;
+        }
+
+        .certificate h3 {
+            color: #172554;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           SOFT SKILLS
+        ========================= */
+
+        .soft-skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .soft-skills span {
+            background: #dbeafe;
+
+            color: #1d4ed8;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           LINKS
+        ========================= */
+
+        a {
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .resume {
+                width: 95%;
+
+                grid-template-columns: 1fr;
+
+                margin: 15px auto;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .soft-skills {
+                justify-content: center;
+            }
+        }
+
+
+        /* =========================
+           PRINT
+        ========================= */
+
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 100%;
+
+                max-width: 100%;
+
+                margin: 0;
+
+                box-shadow: none;
+
+                border-radius: 0;
+            }
+
+            .project:hover {
+                transform: none;
+
+                box-shadow: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="resume">
+
+
+    <!-- =========================
+         LEFT SIDEBAR
+    ========================= -->
+
+    <aside class="sidebar">
+
+
+        <!-- PROFILE -->
+
+        <div class="profile">
+
+            <div class="profile-img">
+
+                <!-- Replace with your own photo -->
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHuCk0WJun_F5FOW0ilmnV_pIojbAqEU6hioI3FhvEu6gh39PiHtTOZhM&s=10"
+                    alt="Muhammedh Shamsudheen">
+
+            </div>
+
+            <h1>Muhammedh Shamsudheen N.B.</h1>
+
+            <p>CSE Student | Cybersecurity Enthusiast</p>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <section class="contact">
+
+            <h2>Contact</h2>
+
+            <p>📍 Tamil Nadu, India</p>
+
+            <p>
+                📧
+                <a href="mailto:YOUR_EMAIL@gmail.com">
+                    YOUR_EMAIL@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📱 +91 XXXXX XXXXX
+            </p>
+
+            <p>
+                💻
+                <a href="YOUR_GITHUB_URL" target="_blank">
+                    GitHub
+                </a>
+            </p>
+
+            <p>
+                🔗
+                <a href="YOUR_LINKEDIN_URL" target="_blank">
+                    LinkedIn
+                </a>
+            </p>
+
+        </section>
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <section>
+
+            <h2>Technical Skills</h2>
+
+
+            <div class="skill">
+
+                <span class="skill-name">
+                    Python
+                </span>
+
+                <div class="bar">
+                    <div class="progress python"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-name">
+                    Java
+                </span>
+
+                <div class="bar">
+                    <div class="progress java"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-name">
+                    HTML
+                </span>
+
+                <div class="bar">
+                    <div class="progress html"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-name">
+                    CSS
+                </span>
+
+                <div class="bar">
+                    <div class="progress css"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-name">
+                    JavaScript
+                </span>
+
+                <div class="bar">
+                    <div class="progress javascript"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-name">
+                    Cybersecurity
+                </span>
+
+                <div class="bar">
+                    <div class="progress cybersecurity"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <span class="skill-name">
+                    SQL
+                </span>
+
+                <div class="bar">
+                    <div class="progress sql"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LANGUAGES -->
+
+        <section>
+
+            <h2>Languages</h2>
+
+            <p>English</p>
+
+            <p>Tamil</p>
+
+        </section>
+
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="content">
+
+
+        <!-- PROFILE -->
+
+        <section>
+
+            <h2 class="section-title">
+                Profile
+            </h2>
+
+            <p>
+                Computer Science and Engineering student with a strong
+                interest in Cybersecurity, Web Development and
+                Artificial Intelligence. Interested in developing
+                practical technology solutions and secure web
+                applications. Currently building hands-on experience
+                through academic projects, cybersecurity learning and
+                real-world problem-solving.
+            </p>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section>
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <div class="education">
+
+                <h3>
+                    B.E. Computer Science and Engineering
+                </h3>
+
+                <span class="date">
+                    2024 - Present | 2nd Year
+                </span>
+
+                <p>
+                    Rathinam Technical Campus, Coimbatore
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section>
+
+            <h2 class="section-title">
+                Projects
+            </h2>
+
+
+            <!-- QUICKMOTO -->
+
+            <div class="project">
+
+                <h3>
+                    🏍️ QuickMoto AI Garage
+                </h3>
+
+                <span class="tech">
+                    HTML • CSS • JavaScript • AI • LocalStorage
+                </span>
+
+                <p>
+                    Developed a smart two-wheeler workshop management
+                    platform designed to improve transparency in
+                    vehicle servicing and customer communication.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Digital vehicle check-in and customer details
+                    </li>
+
+                    <li>
+                        Interactive bike issue identification
+                    </li>
+
+                    <li>
+                        Repair tracking and job card workflow
+                    </li>
+
+                    <li>
+                        Service history and billing management
+                    </li>
+
+                    <li>
+                        Spare-parts and labour cost transparency
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- HOTELSYNCPRO -->
+
+            <div class="project">
+
+                <h3>
+                    🏨 HotelSync Pro
+                </h3>
+
+                <span class="tech">
+                    HTML • CSS • JavaScript • LocalStorage
+                </span>
+
+                <p>
+                    Developed a web-based hotel staff attendance
+                    management system for simplifying employee
+                    attendance tracking and daily administration.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Staff registration and management
+                    </li>
+
+                    <li>
+                        Present, absent and leave tracking
+                    </li>
+
+                    <li>
+                        Search and staff profile management
+                    </li>
+
+                    <li>
+                        Dashboard with attendance statistics
+                    </li>
+
+                    <li>
+                        Persistent browser-based data storage
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- SECURITY PROJECT -->
+
+            <div class="project">
+
+                <h3>
+                    🔐 Secure Login & Security Projects
+                </h3>
+
+                <span class="tech">
+                    Python • Cybersecurity • Web Security
+                </span>
+
+                <p>
+                    Worked on cybersecurity-oriented projects focused
+                    on secure authentication, vulnerability awareness
+                    and protecting web applications from common
+                    security threats.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Secure authentication concepts
+                    </li>
+
+                    <li>
+                        Password hashing and session security
+                    </li>
+
+                    <li>
+                        SQL injection prevention concepts
+                    </li>
+
+                    <li>
+                        Phishing detection and cybersecurity learning
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATIONS -->
+
+        <section>
+
+            <h2 class="section-title">
+                Certifications
+            </h2>
+
+
+            <div class="certificate">
+
+                <h3>
+                    Mastercard Cybersecurity Virtual Experience
+                </h3>
+
+                <p>
+                    Forage
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    Cybersecurity / Technical Certifications
+                </h3>
+
+                <p>
+                    Add your verified certification name and platform
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESTS -->
+
+        <section>
+
+            <h2 class="section-title">
+                Areas of Interest
+            </h2>
+
+            <div class="soft-skills">
+
+                <span>Cybersecurity</span>
+
+                <span>Ethical Hacking</span>
+
+                <span>Web Security</span>
+
+                <span>Artificial Intelligence</span>
+
+                <span>Web Development</span>
+
+                <span>Problem Solving</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOFT SKILLS -->
+
+        <section>
+
+            <h2 class="section-title">
+                Soft Skills
+            </h2>
+
+            <div class="soft-skills">
+
+                <span>Problem Solving</span>
+
+                <span>Teamwork</span>
+
+                <span>Communication</span>
+
+                <span>Quick Learning</span>
+
+                <span>Adaptability</span>
+
+                <span>Time Management</span>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+</body>
+
+</html>
